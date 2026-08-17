@@ -206,7 +206,7 @@
   description: civil-defense-milita-description
   color: "#666600"
   whitelisted: true
-  hidden: true # Forge-change: hide
+  hidden: false # Forge-change: hide
 
 - type: company
   id: UllmanIndustries
@@ -303,7 +303,7 @@
   color: "#aa1010"
   image: /Textures/_Mono/Companies/CSP.png
   whitelisted: true
-  hidden: true # Forge-change: hide
+  hidden: false # Forge-change: hide
   # logins:
   #   - GoobieWoob
   #   - Coolzman
@@ -348,7 +348,7 @@
   color: "#930000"
   image: /Textures/_Mono/Companies/redsailcorsairs.png
   whitelisted: true
-  hidden: true # Forge-change: hide
+  hidden: false # Forge-change: hide
   # logins: # 20 total
   # - Corrupt
   # - Jasos
