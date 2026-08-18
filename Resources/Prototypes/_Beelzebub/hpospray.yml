@@ -1,0 +1,26 @@
+- type: entity
+  parent: CentCommHypo
+  id: BeelzebubAdminHypo
+  name: "Экспериментальный гипоспрей UI-510"
+  suffix: Admeme
+  description: "Ультимативное решение в области доставки лекарств в организм. Теперь с использованием блюспейс технологий!"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 3000
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 3000
+  - type: Hypospray
+    solutionName: hypospray
+    transferAmount: 15 # Количество химии, вводимое за один клик (можно настроить)
+  - type: SolutionRegeneration
+    solution: hypospray
+    duration: 1.0 # Как часто (в секундах) будут капать химикаты
+    generated:
+      reagents:
+      - ReagentId: Omnizine
+        Quantity: 50.0 # Сколько единиц Ноктюрина будет восстанавливаться за один тик
+  - type: UseDelay
+    delay: 0.0
