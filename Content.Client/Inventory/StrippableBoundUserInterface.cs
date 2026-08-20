@@ -151,14 +151,20 @@ namespace Content.Client.Inventory
                 _strippingMenu.SnareContainer.AddChild(button);
             }
 
-            // Forge-Change-Start: size the window from the slot grid so the back/belt row is never clipped.
+            // Forge-Change-Start: size the window from the visible slot grid so the back/belt row is never clipped.
+            // NPC templates park unstrippable slots at 20+ so they sit outside the vanilla window; do not grow to fit those.
+            const int hiddenSlotPos = 10;
             var cell = SlotControl.DefaultButtonSize + ButtonSeparation;
             var maxPos = Vector2i.Zero;
             if (inv != null)
             {
                 foreach (var slot in inv.Slots)
                 {
-                    maxPos = Vector2i.ComponentMax(maxPos, slot.StrippingWindowPos);
+                    var pos = slot.StrippingWindowPos;
+                    if (pos.X >= hiddenSlotPos || pos.Y >= hiddenSlotPos)
+                        continue;
+
+                    maxPos = Vector2i.ComponentMax(maxPos, pos);
                 }
             }
 
@@ -167,6 +173,13 @@ namespace Content.Client.Inventory
             var height = (maxPos.Y + 1) * cell + 88f + hands * cell;
             if (snare?.IsEnsnared == true)
                 height += 40f;
+
+            var viewport = _ui.WindowRoot.Size;
+            if (viewport.X > 1 && viewport.Y > 1)
+            {
+                width = Math.Min(width, MathF.Max(280f, viewport.X * 0.5f));
+                height = Math.Min(height, MathF.Max(360f, viewport.Y * 0.85f));
+            }
 
             _strippingMenu.SetSize = new Vector2(width, height);
             // Forge-Change-End
