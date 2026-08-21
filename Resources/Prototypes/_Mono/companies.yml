@@ -49,26 +49,6 @@
   color: "#008CE3"
   whitelisted: true
   hidden: true # Forge-change
-  # Just write to Forge-admins and we will add you to TSFHC
-  # logins: # admins only here !!! or your PR will be CLOSED!!!! also serves as a example for ur whitelisted factions
-  # - localhost@Ark
-  # - Ark
-  # - DisguisedBear
-  # - JuneCat
-  # - AwareFoxy
-  # - Avalon_Proto
-  # - Archylle
-  # - Arcticular
-  # - ArtemisYK
-  # - NigelSugar
-  # - Reverence
-  # - BluHNT
-  # - DrOktober
-  # - Archylle
-  # - neoscav
-  # - UnhipPaladin
-  # - Onezero0
-# DO NOT TOUCH
 
 # ====TSF / Protag. Companies====
 
@@ -379,3 +359,4 @@
   color: "#B500B5"
   image: /Textures/_Mono/Companies/PLXCOR.png
   whitelisted: true
+  hidden: true # Forge-change: hide
