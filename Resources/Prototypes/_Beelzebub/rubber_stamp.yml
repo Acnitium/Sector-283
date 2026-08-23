@@ -1,0 +1,28 @@
+- type: entity
+  name: "печать Midnight Arms Co."
+  description: "Печать для проставления на важных документах."
+  parent: RubberStampBase
+  id: RubberStampMAC
+  components:
+  - type: Stamp
+    stampedName: "Midnight Arms Company"
+    stampedColor: "#690002"
+    stampState: "paper_stamp-mono-ussp"
+  - type: Sprite
+    sprite: _Mono/Objects/Misc/stamps.rsi
+    state: stamp-ussp
+    
+- type: entity
+  name: "печать Бездны"
+  description: "Печать для... как она прекрасна... Все эти узоры, удобная ручка, приятный вес... Она идеальна."
+  parent: RubberStampBase
+  id: RubberStampAbyss
+  components:
+  - type: Stamp
+    stampedName: "Бездна"
+    stampedColor: "#B00000"
+    stampState: "paper_stamp-syndicate"
+  - type: Sprite
+    state: stamp-syndicate
+    
+    
