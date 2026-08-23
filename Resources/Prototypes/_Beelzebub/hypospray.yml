@@ -14,13 +14,13 @@
           Quantity: 3000
   - type: Hypospray
     solutionName: hypospray
-    transferAmount: 15 # Количество химии, вводимое за один клик (можно настроить)
+    transferAmount: 15
   - type: SolutionRegeneration
     solution: hypospray
-    duration: 1.0 # Как часто (в секундах) будут капать химикаты
+    duration: 1.0
     generated:
       reagents:
       - ReagentId: Omnizine
-        Quantity: 50.0 # Сколько единиц Ноктюрина будет восстанавливаться за один тик
+        Quantity: 50.0
   - type: UseDelay
     delay: 0.0
