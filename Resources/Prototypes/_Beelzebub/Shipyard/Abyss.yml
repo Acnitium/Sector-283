@@ -1,0 +1,41 @@
+ type: vessel
+  id: Abyss
+  parent: BaseVessel
+  name: Бездна
+  description: "Тем, кто ищет хороший бар с богатой историей, мы рекомендуем «Бездна». Здесь вполне можно отдохнуть за парой коктейлей, но это прежде всего место, где заключаются сделки. Кто-то приходит сюда, чтобы получить работу или обсудить детали заказа с клиентом, а кто-то — просто расслабиться и посмотреть на лучших наёмников и работадателей сектора. «Бездна» — лучшее заведение для всего перечисленного.
+И, в общем-то, единственное."
+  price: 340000
+  category: Large
+  group: Shipyard
+  shuttlePath: /SharedMaps/_Mono/Shuttles/_Beelzebub/Abyss.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Kitchen
+  - Botany
+  engine:
+  - AME
+  - Solar
+  addComponents:
+  - type: SolarPoweredGrid
+    doNotCull: false
+
+- type: gameMap
+  id: Abyss
+  mapName: 'Бездна'
+  mapPath: /SharedMaps/_Mono/Shuttles/_Beelzebub/Abyss.yml
+  minPlayers: 0
+  stations:
+    Abyss:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Abyss CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
