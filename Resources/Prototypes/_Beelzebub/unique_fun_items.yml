@@ -1,0 +1,192 @@
+- type: entity
+  name: "полезный красный бургер"
+  description: "Выглядит очень... полезным? Выглядит как ответ на все проблемы человечества."
+  parent: PrettyBurgerRed
+  id: BeelzebubBurgerRed
+  components:
+   - type: PointLight
+     color: "#CC0000FF"
+     energy: 15
+     radius: 3
+   - type: Godmode
+   - type: RandomWalk
+     maxSpeed: 5
+     minSpeed: 5
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 5000000
+       reagents:
+        - ReagentId: GreenTea
+          Quantity: 1000000
+        - ReagentId: JuiceBerry
+          Quantity: 1000000
+        - ReagentId: Whiskey
+          Quantity: 1000000
+        - ReagentId: Omnizine
+          Quantity: 1000000
+        - ReagentId: WhiskeyCola
+          Quantity: 1000000
+   - type: FlavorProfile
+     flavors:
+      - bun
+      - meaty
+      - sweet
+      - holy
+     ignoreReagents:
+      - GreenTea
+      - JuiceBerry
+      - Whiskey
+      - Omnizine
+      - WhiskeyCola
+
+- type: entity
+  name: "урановый зелёный бургер"
+  description: "От него очень сильно фонит."
+  parent: PrettyBurgerGreen
+  id: BeelzebubBurgerGreen
+  components:
+   - type: PointLight
+     color: "#52FF39FF"
+     energy: 10
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 5
+     minSpeed: 5
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: Uranium
+          Quantity: 50
+   - type: RadiationSource
+     enabled: true
+     intensity: 20
+     slope: 4
+     
+- type: entity
+  name: "странный банан"
+  description: "Богат... чем-чем?"
+  parent: FoodBanana
+  id: BeelzebubBanana
+  components:
+   - type: PointLight
+     color: "#F1C232FF"
+     energy: 20
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 5
+     minSpeed: 5
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: Bananadine
+          Quantity: 50
+   - type: RadiationSource
+     enabled: true
+     intensity: 3
+     slope: 0.5
+
+- type: entity
+  name: "тювайё"
+  description: "Тювайа ^^"
+  parent: FoodBluePumpkin
+  id: BeelzebubBluePumpkin
+  components:
+   - type: PointLight
+     color: "#1155cc"
+     energy: 20
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 1
+     minSpeed: 1
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: AmbuzolPlus
+          Quantity: 50
+   - type: EmitSoundOnCollide
+     sound:
+      path: /Audio/_Beelzebub/tywaye.ogg
+
+- type: entity
+  name: "надоедливый апельсиновый торт"
+  description: "Эй Яблоко!"
+  parent: FoodCakeOrange
+  id: BeelzebubOrangeCake
+  components:
+   - type: PointLight
+     color: "#fc7303"
+     energy: 20
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 1
+     minSpeed: 1
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: JuiceOrange
+          Quantity: 50
+
+- type: entity
+  name: "голубой бургер"
+  description: "99% криптобиолина."
+  parent: PrettyBurgerBlue
+  id: BeelzebubCyanBurger
+  components:
+   - type: PointLight
+     color: "#46bdc6"
+     energy: 20
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 1
+     minSpeed: 1
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: Cryptobiolin
+          Quantity: 50
+          
+- type: entity
+  name: "настойчивый бургер"
+  description: "Я вылечу тебя, обязательно."
+  parent: PrettyBurgerPurple
+  id: BeelzebubPurpleBurger
+  components:
+   - type: PointLight
+     color: "#bf00b9"
+     energy: 20
+     radius: 2
+   - type: RandomWalk
+     maxSpeed: 1
+     minSpeed: 1
+   - type: MovementIgnoreGravity
+     weightless: true
+   - type: SolutionContainerManager
+     solutions:
+      food: 
+       maxVol: 50
+       reagents:
+        - ReagentId: Stasizium
+          Quantity: 50
