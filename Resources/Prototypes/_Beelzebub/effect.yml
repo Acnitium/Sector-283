@@ -1,11 +1,39 @@
 - type: entity
   id: AdminInstantEffectBluespaceFlash
-  name: "моментальный эффект (Блюспейс вспышка)"
+  name: "моментальный эффект (блюспейс вспышка)"
   components:
   - type: PointLight
     radius: 10.5
     energy: 15
     color: "#18abf5"
+  - type: TimedDespawn
+    lifetime: 1
+  - type: EmitSoundOnSpawn
+    sound: 
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+
+- type: entity
+  id: AdminInstantEffectRedespaceFlash
+  name: "моментальный эффект (редспейс вспышка)"
+  components:
+  - type: PointLight
+    radius: 10.5
+    energy: 15
+    color: "#cc0000"
+  - type: TimedDespawn
+    lifetime: 1
+  - type: EmitSoundOnSpawn
+    sound: 
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+
+- type: entity
+  id: AdminInstantEffectAbyssFlash
+  name: "моментальный эффект (вспышка бездны)"
+  components:
+  - type: PointLight
+    radius: 10.5
+    energy: 15
+    color: "#741b47"
   - type: TimedDespawn
     lifetime: 1
   - type: EmitSoundOnSpawn
