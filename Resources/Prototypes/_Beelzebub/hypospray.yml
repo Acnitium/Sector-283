@@ -1,8 +1,8 @@
 - type: entity
   parent: CentCommHypo
-  id: BeelzebubAdminHypo
-  name: "Экспериментальный гипоспрей UI-510"
-  suffix: Admeme
+  id: BeelzebubAdminHypoInf
+  name: "экспериментальный гипоспрей AB-510"
+  suffix: Infinite
   description: "Ультимативное решение в области доставки лекарств в организм. Теперь с использованием блюспейс технологий!"
   components:
   - type: SolutionContainerManager
@@ -21,6 +21,25 @@
     generated:
       reagents:
       - ReagentId: Omnizine
-        Quantity: 50.0
+        Quantity: 5.0
+  - type: UseDelay
+    delay: 0.0
+
+- type: entity
+  parent: CentCommHypo
+  id: BeelzebubAdminHypo
+  name: "экспериментальный гипоспрей AB-510"
+  description: "Ультимативное решение в области доставки лекарств в организм. Теперь с использованием редспейс технологий!"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 3000
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 100
+  - type: Hypospray
+    solutionName: hypospray
+    transferAmount: 15
   - type: UseDelay
     delay: 0.0
