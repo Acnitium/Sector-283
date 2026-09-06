@@ -19,7 +19,6 @@ namespace Content.Client.Viewport;
 
 public sealed partial class ScalingViewport
 {
-    [Dependency] private IMapManager _mapManager = default!;
     [Dependency] private IEyeManager _eyeManager = default!;
     [Dependency] private IPlayerManager _player = default!;
     [Dependency] private ITileDefinitionManager _tile = default!;
@@ -71,7 +70,9 @@ public sealed partial class ScalingViewport
         var mapCoordsBottomLeft = new MapCoordinates(new Vector2(minX, minY), mapId);
         var mapCoordsTopRight = new MapCoordinates(new Vector2(maxX, maxY), mapId);
 
-        if (_mapSystem is null || !_mapManager.TryFindGridAt(mapUid, mapCoordsBottomLeft.Position, out var gridUid, out var grid))
+        _mapSystem ??= _entityManager.System<SharedMapSystem>();
+
+        if (!_mapSystem.TryFindGridAt(mapUid, mapCoordsBottomLeft.Position, out var gridUid, out var grid))
             return true;
 
         var tileBottomLeft = _mapSystem.TileIndicesFor(gridUid, grid, mapCoordsBottomLeft);
@@ -95,6 +96,24 @@ public sealed partial class ScalingViewport
     private IClydeViewport? _transitViewport;
     private ShaderInstance? _transitBlitShader;
     private ShaderInstance? _cloudShader;
+
+    // Forge-Change: free Z-level GPU resources when the control is torn down. The transit
+    // viewport is otherwise only disposed on size change (in RenderTransitOverhead), so it
+    // leaks a viewport + render target every time this control is destroyed.
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+        if (!disposing)
+            return;
+
+        _transitViewport?.Dispose();
+        _transitViewport = null;
+        _transitBlitShader?.Dispose();
+        _transitBlitShader = null;
+        _cloudShader?.Dispose();
+        _cloudShader = null;
+    }
 
     private void RenderZLevels(IRenderHandle renderHandle, IClydeViewport viewport)
     {
