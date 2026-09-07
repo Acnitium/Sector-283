@@ -73,7 +73,7 @@ mmc-liason = Корпоративный представитель
 
 ### CC/MD ranks
 cc-judge = Судья
-cc-stc = STC
+cc-stc = Диспетчер
 cc-overseer = Смотритель
 md-doc = Директор TTI
 md-medic = Сотрудник TTI
