@@ -2,3 +2,6 @@
 	path = RobustToolbox
 	url = https://github.com/Forge-Station/RobustToolbox.git
 	branch = RobustFrontier-v289
+[submodule "Sector-283"]
+	path = Sector-283
+	url = https://github.com/Acnitium/Sector-283
