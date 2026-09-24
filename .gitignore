@@ -315,3 +315,5 @@ Resources/MapImages
 
 # Forge secrets
 /MonolithSecrets
+/Resources/Maps/_Forge/Outpost/CentralOutpost.yml
+/Scripts/bat/runQuickServer.bat
