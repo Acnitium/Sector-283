@@ -111,7 +111,7 @@ gene-primal-form-desc = The body collapses into another species. Which animal it
 gene-species-form-name = Xenogeneic form
 gene-species-form-desc = The genome rewrites the whole body into another humanoid species.
 
-gene-form-desc = The genome rewrites the body into this species. Assembled on the Morphology branch.
+gene-form-desc = The genome rewrites the body into this species, including that species' damage resistances. Sight stays clear. Assembled on the Morphology branch.
 
 gene-bestial-tail-name = Bestial tail
 gene-bestial-tail-desc = A tail erupts from the spine. Pattern and shape are rewritten every shift.
@@ -281,7 +281,8 @@ genetics-gene-deactivated = The {$gene} gene deactivates.
 genetics-express-nothing = The strand holds. Nothing unique expresses.
 genetics-aggression = The subject flies into a rage!
 genetics-express-hint = The strand did not assemble. Matching codons on this branch are now highlighted.
-genetics-irradiate-critical = The subject is in critical condition. Irradiation is too dangerous.
+genetics-irradiate-critical = The subject is unconscious or dead. The genome cannot be rewritten.
+genetics-modify-need-bare = Strip the subject completely — clothing and gear block the emitter.
 genetics-irradiate-no-mutagen = The scanner has no unstable mutagen. Pour some into the DNA modifier.
 genetics-pulse-no-mutagen = Not enough mutagen to pulse this block.
 genetics-scanner-need-mutagen = Only unstable mutagen can be poured into this.
@@ -299,6 +300,9 @@ genetics-injector-examine-gene = Contains: {$gene}
 genetics-injector-no-genome = {$target} has no genome to modify.
 genetics-steel-no-mutate = Steel does not mutate.
 genetics-injector-success = The injector clicks as it rewrites {$target}'s genome.
+genetics-no-server = The console is not linked to a DNA server. The sequence was not recorded.
+genetics-species-locked = The body will not give the old form back. It stays, even after death.
+genetics-feral-speech = Throat and hearing went to the beast. Common speech no longer comes.
 
 # Entities
 
@@ -310,6 +314,10 @@ ent-DnaModifierScannerMachineCircuitboard = DNA modifier scanner machine board
     .desc = A machine printed circuit board for a DNA modifier scanner.
 ent-GeneticsConsoleComputerCircuitboard = genetics console computer board
     .desc = A computer printed circuit board for a genetics console.
+ent-MachineGeneticsServer = DNA server
+    .desc = Stores gene sequences for consoles linked to it with a multitool or network configurator.
+ent-GeneticsServerMachineCircuitboard = DNA server machine board
+    .desc = A machine printed circuit board for a DNA server.
 ent-DnaInjector = DNA injector
     .desc = A one-use syringe that writes an isolated gene into a living genome — or strips it out.
 ent-DnaInjectorFilledHulk = DNA injector
@@ -324,4 +332,8 @@ signal-port-name-genetics-scanner-sender = DNA modifier scanner
 signal-port-description-genetics-scanner-sender = Genetics console signal sender
 signal-port-name-genetics-scanner-receiver = DNA modifier scanner
 signal-port-description-genetics-scanner-receiver = DNA modifier scanner signal receiver
+signal-port-name-genetics-server-sender = DNA server
+signal-port-description-genetics-server-sender = Genetics console sender to a DNA server
+signal-port-name-genetics-server-receiver = DNA server
+signal-port-description-genetics-server-receiver = DNA server signal receiver
 

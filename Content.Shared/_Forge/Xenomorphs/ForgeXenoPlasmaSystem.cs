@@ -36,8 +36,9 @@ public sealed class ForgeXenoPlasmaSystem : EntitySystem
         if (cost <= 0f)
             return true;
 
+        // A grafted host has no plasma pool. The ability is allowed; its cooldown is set when the gland is implanted.
         if (!Resolve(uid, ref plasma, false))
-            return false;
+            return !HasComp<ForgeXenoComponent>(uid);
 
         if (plasma.Plasma < cost)
             return false;
@@ -88,8 +89,7 @@ public sealed class ForgeXenoPlasmaSystem : EntitySystem
                 continue;
 
             var regen = OnWeeds(xform) ? plasma.RegenOnWeeds : plasma.Regen;
-            if (HasComp<ForgeXenoRestingComponent>(uid))
-                regen *= plasma.RestMultiplier;
+            // Rest gland removed — plasma regen is baseline only.
 
             if (regen <= 0f)
                 continue;

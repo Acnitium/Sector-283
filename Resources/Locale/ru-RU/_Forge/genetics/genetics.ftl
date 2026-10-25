@@ -111,7 +111,7 @@ gene-primal-form-desc = Тело схлопывается в другую сущ
 gene-species-form-name = Чужеродная форма
 gene-species-form-desc = Геном переписывает всё тело в другую гуманоидную расу.
 
-gene-form-desc = Геном переписывает тело в эту расу. Собирается в ветви Морфология.
+gene-form-desc = Геном переписывает тело в эту расу: внешность и её уязвимости к урону. Зрение не мутнеет. Собирается в ветви Морфология.
 
 gene-bestial-tail-name = Звериный хвост
 gene-bestial-tail-desc = Из позвоночника прорастает хвост. Форма и рисунок переписываются каждую смену.
@@ -281,7 +281,8 @@ genetics-gene-deactivated = Ген «{$gene}» деактивируется.
 genetics-express-nothing = Цепочка держится. Ничего уникального не выражается.
 genetics-aggression = Субъект срывается в ярость!
 genetics-express-hint = Цепочка не сошлась. Подсвечены кодоны, которые уже подходят уникальностям этой ветви.
-genetics-irradiate-critical = Субъект в критическом состоянии. Облучение слишком опасно.
+genetics-irradiate-critical = Субъект без сознания или мёртв. Переписывать геном нельзя.
+genetics-modify-need-bare = С субъекта нужно снять всю одежду и предметы — иначе излучатель не пробьёт ткань.
 genetics-irradiate-no-mutagen = В сканере нет нестабильного мутагена. Залейте его в ДНК-модификатор.
 genetics-pulse-no-mutagen = На импульс этого блока не хватает мутагена.
 genetics-scanner-need-mutagen = Сюда заливают только нестабильный мутаген.
@@ -299,6 +300,9 @@ genetics-injector-examine-gene = Содержит: {$gene}
 genetics-injector-no-genome = У {$target} нет генома для изменения.
 genetics-steel-no-mutate = Сталь не мутирует.
 genetics-injector-success = Инъектор щёлкает, переписывая геном {$target}.
+genetics-no-server = Консоль не связана с сервером ДНК. Последовательность не записана.
+genetics-species-locked = Тело не отпускает новую форму. Обратно оно уже не встанет, даже после смерти.
+genetics-feral-speech = Горло и слух ушли в зверя. Общая речь больше не даётся.
 
 # Сущности
 
@@ -310,6 +314,10 @@ ent-DnaModifierScannerMachineCircuitboard = ДНК-модификатор (ма�
     .desc = Печатная плата для ДНК-модификатора.
 ent-GeneticsConsoleComputerCircuitboard = консоль генетики (консольная плата)
     .desc = Печатная плата для консоли генетики.
+ent-MachineGeneticsServer = сервер ДНК
+    .desc = Хранит последовательности генов консолей, связанных с ним мультитулом или конфигуратором сетей.
+ent-GeneticsServerMachineCircuitboard = сервер ДНК (машинная плата)
+    .desc = Печатная плата для сервера ДНК.
 ent-DnaInjector = ДНК-инъектор
     .desc = Одноразовый шприц, который вписывает изолированный ген в живой геном — или вырезает его.
 ent-DnaInjectorFilledHulk = ДНК-инъектор
@@ -324,4 +332,8 @@ signal-port-name-genetics-scanner-sender = ДНК-модификатор
 signal-port-description-genetics-scanner-sender = Передатчик сигнала консоли генетики
 signal-port-name-genetics-scanner-receiver = ДНК-модификатор
 signal-port-description-genetics-scanner-receiver = Приёмник сигнала ДНК-модификатора
+signal-port-name-genetics-server-sender = Сервер ДНК
+signal-port-description-genetics-server-sender = Передатчик консоли на сервер ДНК
+signal-port-name-genetics-server-receiver = Сервер ДНК
+signal-port-description-genetics-server-receiver = Приёмник сервера ДНК
 
