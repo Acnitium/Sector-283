@@ -41,3 +41,16 @@
   description: renegate-resistance-description
   color: "#6B2D2D"
   whitelisted: true
+
+- type: company
+  id: Abyss
+  form: Antagonist
+  name: Бездна
+  description: company-abyss-description
+  note: abyss-company-note
+  color: "#800020" # Багровый цвет
+  whitelisted: true
+  special:
+  - !type:AddAccessSpecial
+    tags:
+    - Abyss

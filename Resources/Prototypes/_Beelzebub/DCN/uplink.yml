@@ -1,0 +1,23 @@
+- type: entity
+  parent: BaseUplinkRadio
+  id: ContractorUplinkRadio100 # Mono
+  name: "Аплинк DCN"
+  description: Подозрительное, но новое радио.
+  suffix: 100 TC
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 100
+    categories:
+     - ContractorUplinkKit
+     - ContractorUplinkWeaponry
+     - ContractorUplinkAmmo
+     - ContractorUplinkExplosives
+     - ContractorUplinkChemicals
+     - ContractorUplinkDeception
+     - ContractorUplinkDisruption
+     - ContractorUplinkImplants
+     - ContractorUplinkAllies
+     - ContractorUplinkWearables
+     - ContractorUplinkJob
+     - ContractorUplinkPointless

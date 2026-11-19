@@ -145,6 +145,7 @@
     - EmpireInqusitor
     - EmpireCommander
     - EmpireDiplomacy
+    - Abyss
     # Forge-change-end
     privilegedIdSlot:
       name: id-card-console-privileged-id
